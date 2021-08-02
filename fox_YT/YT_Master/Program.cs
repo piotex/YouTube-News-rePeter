@@ -16,7 +16,6 @@ namespace YT_Master
     {
         static void Main(string[] args)
         {
-            rec_funck();
             Console.ReadLine();
         }
 
