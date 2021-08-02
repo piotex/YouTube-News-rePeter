@@ -1,40 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Text;
+using YT_Master.Communication.Basic;
 
 namespace YT_Master.Communication.Slaves
 {
-    public class CommunicationBankier
+    public class CommunicationBankier : CommunicationBasic
     {
-        /*--------------------------------------------------------------------------------------------------------------------------------
-            string url = @"https://www.bankier.pl/rynki/wiadomosci/2";
-            List<string> list_of_links = new List<string>();
-            try
-            {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    Stream receiveStream = response.GetResponseStream();
-                    StreamReader readStream = null;
-                    if (String.IsNullOrWhiteSpace(response.CharacterSet))
-                    {
-                        readStream = new StreamReader(receiveStream);
-                    }
-                    else
-                    {
-                        readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
-                    }
-                    body = readStream.ReadToEnd();
-
-                    response.Close();
-                    readStream.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            /*--------------------------------------------------------------------------------------------------------------------------------*/
+        public string GetBodyBankierNews(int page)
+        {
+            string url = @"https://www.bankier.pl/rynki/wiadomosci/" + page.ToString();
+            return GetBody(url);
+        }
     }
 }
