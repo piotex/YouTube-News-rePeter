@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using YT_Master.Communication.Slaves;
 
 namespace YT_Master
 {
@@ -16,6 +17,10 @@ namespace YT_Master
     {
         static void Main(string[] args)
         {
+            CommunicationNotion tmp = new CommunicationNotion();
+            tmp.LogIn();
+            tmp.AddScenario();
+
             Console.ReadLine();
         }
 
