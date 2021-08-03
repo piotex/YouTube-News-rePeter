@@ -47,6 +47,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
             }
           },
           "imports": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ea5/oCwTlGj60q4sAcBCq73uAWYmSfOGe06TmMuZILytiJltpuSiI4IY+OHLH0w4SC66z8jbeVmj24tstGFmGw==",
+  "dgSpecHash": "dOvzU0V2gN7ffvDqRUyQyG4mg4J8/HjX6k1d1AG2gVbnjnzR8Vf1h6+585XlEsA/AWcy5xNsv9eRFu0iWski4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\Tests_YT_Master\\Tests_YT_Master.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\pkubo\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
@@ -99,7 +100,8 @@
     "C:\\Users\\pkubo\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\pkubo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\pkubo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512"
   ],
   "logs": []
 }

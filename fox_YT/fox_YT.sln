@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YT_Master", "YT_Master\YT_Master.csproj", "{6DFC52C6-9F30-4E85-856F-FA324C37CB3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_YT_Master", "Tests_YT_Master\Tests_YT_Master.csproj", "{FE6E2C06-F010-441D-8D95-24FCF2F6C2D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests_YT_Master", "Tests_YT_Master\Tests_YT_Master.csproj", "{FE6E2C06-F010-441D-8D95-24FCF2F6C2D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
