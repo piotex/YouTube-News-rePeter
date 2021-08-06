@@ -6,9 +6,9 @@ using System.Text;
 
 namespace YT_Master.Communication.Basic
 {
-    public abstract class CommunicationBasic
+    public class CommunicationBasic
     {
-        protected string GetBody(string url)
+        public  string GetBody(string url)
         {
             string body = "";
 

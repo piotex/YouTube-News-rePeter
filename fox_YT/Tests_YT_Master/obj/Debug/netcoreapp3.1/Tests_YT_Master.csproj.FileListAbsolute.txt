@@ -100,3 +100,5 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.genruntimeconfig.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\Xamarin.Essentials.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.csproj.AssemblyReference.cache

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3EylpHCu+9qunHO1LxCHLOg+dBoSBZLZhIsUD0BfUtvCa5vW+IyKlrh94HImOUk0iwQZftzTnRWvgH127ewF+Q==",
+  "dgSpecHash": "GUvkePxWfVU8KYZf9p78KPUfSkuuhaqcKBf3dr6d4Ctv39sg6XHelx42hOZ64J1vkERHfZTvYe4yVb+A+7gcqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\pkubo\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\nuglify\\1.13.12\\nuglify.1.13.12.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

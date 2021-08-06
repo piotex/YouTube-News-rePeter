@@ -4,9 +4,9 @@ using System.Text;
 
 namespace YT_Master.Operations.Slaves
 {
-    public class OperationGetLinks : OperationCutting<List<string>,string>
+    public class OperationGetLinks : OperationCutting
     {
-        public override List<string> MakeOperation(ref string body)
+        public List<string> GetLinks(string body)
         {
             List<string> ret = new List<string>();
             int startIndex = 0;
@@ -16,7 +16,7 @@ namespace YT_Master.Operations.Slaves
 
             for (int i = 0; i < 100; i++)
             {
-                _isNext(ref body, ref startIndex, classString);                         //to jest po to zeby startIndex byl maksymalnie blisko wlasciwej wartosci do wyciecia
+                getIndex_OfPlace_WhereStringIsNext(ref body, ref startIndex, classString);                         //to jest po to zeby startIndex byl maksymalnie blisko wlasciwej wartosci do wyciecia
                 string tmp = _getValue(ref body, ref startIndex, startString, criticChar);
                 if (i>0 && ret[i-1] == tmp)
                 {
@@ -27,5 +27,6 @@ namespace YT_Master.Operations.Slaves
             throw new Exception("OperationGetLinks -> MakeOperation -> nothing to return");
             return null;
         }
+
     }
 }

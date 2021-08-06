@@ -11,7 +11,7 @@ namespace YT_Master.Communication.Slaves
     {
         public string GetBodyBankierNews(int page)
         {
-            string url = @"https://www.bankier.pl/rynki/wiadomosci/" + page.ToString();
+            string url = @"https://www.bankier.pl/wiadomosc/" + page.ToString();
             return GetBody(url);
         }
     }
