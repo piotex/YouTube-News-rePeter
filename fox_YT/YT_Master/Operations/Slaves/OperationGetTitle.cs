@@ -9,10 +9,24 @@ namespace YT_Master.Operations.Slaves
         public string GetTitleFromText(string body)
         {
             int startIndex = 0;
-            string startString = "     ";
-            char criticChar = '2';
-         
-            return _getValue(ref body, ref startIndex, startString, criticChar);
+            string startString = "";
+            string criticChar = "Podziel się";
+            string partial = " " + _getBetterValue(ref body, ref startIndex, startString, criticChar);
+            string ret = "";
+
+            bool flag = false;
+            for (int i = 0; i < partial.Length; i++)
+            {
+                if (partial[i] != ' ')
+                {
+                    flag = true;
+                }
+                if (flag)
+                {
+                    ret += partial[i];
+                }
+            }
+            return getAfterBigLeter(ret);
         }
     }
 }

@@ -48,11 +48,23 @@ namespace Shot
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.nextRecerdButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(646, 12);
+            this.button1.Location = new System.Drawing.Point(633, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 44);
             this.button1.TabIndex = 0;
@@ -62,7 +74,7 @@ namespace Shot
             // 
             // textBox_tytul
             // 
-            this.textBox_tytul.Location = new System.Drawing.Point(119, 112);
+            this.textBox_tytul.Location = new System.Drawing.Point(107, 0);
             this.textBox_tytul.Multiline = true;
             this.textBox_tytul.Name = "textBox_tytul";
             this.textBox_tytul.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -71,7 +83,7 @@ namespace Shot
             // 
             // textBox_tresc
             // 
-            this.textBox_tresc.Location = new System.Drawing.Point(119, 166);
+            this.textBox_tresc.Location = new System.Drawing.Point(107, 0);
             this.textBox_tresc.Multiline = true;
             this.textBox_tresc.Name = "textBox_tresc";
             this.textBox_tresc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -80,7 +92,7 @@ namespace Shot
             // 
             // textBox_komment
             // 
-            this.textBox_komment.Location = new System.Drawing.Point(119, 310);
+            this.textBox_komment.Location = new System.Drawing.Point(107, 0);
             this.textBox_komment.Multiline = true;
             this.textBox_komment.Name = "textBox_komment";
             this.textBox_komment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -89,7 +101,7 @@ namespace Shot
             // 
             // textBox_iloscZnakow
             // 
-            this.textBox_iloscZnakow.Location = new System.Drawing.Point(119, 360);
+            this.textBox_iloscZnakow.Location = new System.Drawing.Point(107, 0);
             this.textBox_iloscZnakow.Multiline = true;
             this.textBox_iloscZnakow.Name = "textBox_iloscZnakow";
             this.textBox_iloscZnakow.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -98,7 +110,7 @@ namespace Shot
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 112);
+            this.textBox5.Location = new System.Drawing.Point(0, 0);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(101, 44);
@@ -107,7 +119,7 @@ namespace Shot
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 166);
+            this.textBox6.Location = new System.Drawing.Point(0, 0);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(101, 44);
@@ -116,7 +128,7 @@ namespace Shot
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 310);
+            this.textBox7.Location = new System.Drawing.Point(0, 0);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(101, 44);
@@ -125,7 +137,7 @@ namespace Shot
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 360);
+            this.textBox8.Location = new System.Drawing.Point(0, 0);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(101, 44);
@@ -134,7 +146,7 @@ namespace Shot
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(646, 62);
+            this.button2.Location = new System.Drawing.Point(633, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 44);
             this.button2.TabIndex = 9;
@@ -144,7 +156,7 @@ namespace Shot
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(646, 112);
+            this.button3.Location = new System.Drawing.Point(633, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 44);
             this.button3.TabIndex = 10;
@@ -154,7 +166,7 @@ namespace Shot
             // 
             // textBox99
             // 
-            this.textBox99.Location = new System.Drawing.Point(12, 12);
+            this.textBox99.Location = new System.Drawing.Point(0, 0);
             this.textBox99.Multiline = true;
             this.textBox99.Name = "textBox99";
             this.textBox99.Size = new System.Drawing.Size(101, 44);
@@ -163,7 +175,7 @@ namespace Shot
             // 
             // textBox_link
             // 
-            this.textBox_link.Location = new System.Drawing.Point(119, 12);
+            this.textBox_link.Location = new System.Drawing.Point(107, 0);
             this.textBox_link.Multiline = true;
             this.textBox_link.Name = "textBox_link";
             this.textBox_link.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -172,7 +184,7 @@ namespace Shot
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(646, 166);
+            this.button4.Location = new System.Drawing.Point(633, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 138);
             this.button4.TabIndex = 13;
@@ -182,7 +194,7 @@ namespace Shot
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 62);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(101, 44);
@@ -191,7 +203,7 @@ namespace Shot
             // 
             // textBox_Date
             // 
-            this.textBox_Date.Location = new System.Drawing.Point(119, 62);
+            this.textBox_Date.Location = new System.Drawing.Point(107, 0);
             this.textBox_Date.Multiline = true;
             this.textBox_Date.Name = "textBox_Date";
             this.textBox_Date.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -200,7 +212,7 @@ namespace Shot
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(646, 310);
+            this.button5.Location = new System.Drawing.Point(633, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(141, 44);
             this.button5.TabIndex = 16;
@@ -210,7 +222,7 @@ namespace Shot
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(646, 360);
+            this.button6.Location = new System.Drawing.Point(633, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(141, 44);
             this.button6.TabIndex = 17;
@@ -220,43 +232,103 @@ namespace Shot
             // 
             // nextRecerdButton
             // 
+            this.nextRecerdButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.nextRecerdButton.Font = new System.Drawing.Font("Franklin Gothic Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nextRecerdButton.Location = new System.Drawing.Point(12, 410);
+            this.nextRecerdButton.Location = new System.Drawing.Point(12, 361);
             this.nextRecerdButton.Name = "nextRecerdButton";
             this.nextRecerdButton.Size = new System.Drawing.Size(774, 70);
             this.nextRecerdButton.TabIndex = 18;
             this.nextRecerdButton.Text = "Get Next Page Record";
-            this.nextRecerdButton.UseVisualStyleBackColor = true;
+            this.nextRecerdButton.UseVisualStyleBackColor = false;
             this.nextRecerdButton.Click += new System.EventHandler(this.nextRecerdButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox99);
+            this.panel1.Controls.Add(this.textBox_link);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(12, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(775, 45);
+            this.panel1.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBox_Date);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(14, 485);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(775, 44);
+            this.panel2.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.textBox_tytul);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(775, 46);
+            this.panel3.TabIndex = 21;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.textBox_tresc);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Location = new System.Drawing.Point(14, 213);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(774, 142);
+            this.panel4.TabIndex = 22;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.textBox7);
+            this.panel5.Controls.Add(this.textBox_komment);
+            this.panel5.Controls.Add(this.button5);
+            this.panel5.Location = new System.Drawing.Point(12, 163);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(776, 45);
+            this.panel5.TabIndex = 23;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.textBox_iloscZnakow);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Location = new System.Drawing.Point(12, 113);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(775, 46);
+            this.panel6.TabIndex = 24;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 497);
+            this.ClientSize = new System.Drawing.Size(793, 538);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.nextRecerdButton);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox_Date);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox99);
-            this.Controls.Add(this.textBox_link);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox_iloscZnakow);
-            this.Controls.Add(this.textBox_komment);
-            this.Controls.Add(this.textBox_tresc);
-            this.Controls.Add(this.textBox_tytul);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -282,6 +354,12 @@ namespace Shot
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button nextRecerdButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

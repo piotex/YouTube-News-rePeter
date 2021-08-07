@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YT_Master.Communication.Basic;
 using YT_Master.Communication.Slaves;
@@ -26,20 +20,20 @@ namespace Shot
 
             counter = 0;
             Linki = new List<string>();
-
-            CommunicationBankier bb = new CommunicationBankier();
-            OperationGetLinks op = new OperationGetLinks();
-
-            for (int pageNumger = 1; pageNumger < 6; pageNumger++)
+            // /*
+            //int pageCount = 20;
+            int pageCount = 2;
+            for (int pageNumger = 1; pageNumger < pageCount; pageNumger++)
             {
-                string pageHtml = bb.GetBodyBankierNews(pageNumger);
-                List<string> data = op.GetLinks(pageHtml);
+                string pageHtml = new CommunicationBankier().GetBodyBankierNews(pageNumger);
+                List<string> data = new OperationGetLinks().GetLinks(pageHtml);
+
                 for (int j = 0; j < data.Count; j++)
                 {
                     Linki.Add("https://www.bankier.pl" + data[j]);
                 }
             }
-
+            // */
             Uzupelnij();
         }
 
@@ -47,6 +41,7 @@ namespace Shot
         {
             CommunicationBasic bb = new CommunicationBasic();
             string body = bb.GetBody(Linki[counter]);
+            //string body = bb.GetBody(@"https://www.bankier.pl/wiadomosc/Apple-zamierza-kontrolowac-iCloud-pod-katem-tresci-z-pornografia-dziecieca-8166529.html");
 
             string content = new OperationGetContent().GetContent(body);
 
@@ -56,6 +51,16 @@ namespace Shot
             textBox_komment.Text = new OperationGetKomensCount().GetCommentsCount(content);
             textBox_link.Text = Linki[counter];
             textBox_iloscZnakow.Text = textBox_tresc.Text.Length.ToString();
+
+
+            CommunicationNotionV2 tmp = new CommunicationNotionV2();
+            tmp.LogIn();
+
+            for (int i = 0; i < 10; i++)
+            {
+                tmp.AddScenario();
+            }
+
 
             counter++;
 

@@ -9,8 +9,8 @@ namespace YT_Master.Operations.Slaves
         public string GetText(string body)
         {
             int startIndex = 0;
-            string startString = "Reuters   ";
-            string criticString = "Komentarze";
+            string startString = @"/ /";
+            string criticString = "Źródło:";
 
             return _getBetterValue(ref body, ref startIndex, startString, criticString);
         }

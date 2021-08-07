@@ -7,6 +7,23 @@ namespace YT_Master.Operations.Slaves
 {
     public abstract class OperationCutting : OperationBasic
     {
+        protected string getAfterBigLeter(string data)
+        {
+            bool after = false;
+            string ret = "";
+            for (int i = 1; i < data.Length; i++)       //ToDo znalezc metode która tnie stringa zeby to ladniej wygladalo :>
+            {
+                if (Char.IsUpper(data[i]))
+                {
+                    after = true;
+                }
+                if (after)
+                {
+                    ret += data[i];
+                }
+            }
+            return ret;
+        }
 
         protected string _getBetterValue(ref string body, ref int startIndex, string startString, string criticString)
         {
@@ -16,7 +33,14 @@ namespace YT_Master.Operations.Slaves
                 while (!isNext(ref body, ref startIndex, criticString))
                 {
                     ret += body[startIndex];
-                    startIndex++;
+                    if (startIndex<body.Length-1)
+                    {
+                        startIndex++;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
                 startIndex += ret.Length;
             }

@@ -11,10 +11,10 @@ namespace YT_Master.Operations.Slaves
         {
             string result = Uglify.HtmlToText(body).Code;
             int startIndex = 0;
-            string startString = "Forum";
+            string startString = " ";
             string criticString = "dodaj komentarz";
 
-            getIndex_OfPlace_WhereStringIsNext(ref result, ref startIndex, startString);
+            //getIndex_OfPlace_WhereStringIsNext(ref result, ref startIndex, startString);
             string contttt = _getBetterValue(ref result, ref startIndex, startString, criticString);
 
             return contttt;

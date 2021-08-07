@@ -10,9 +10,9 @@ namespace YT_Master.Operations.Slaves
         {
             int startIndex = 0;
             string startString = "publikacja";
-            char criticChar = ' ';
+            string criticChar = "Podziel";
 
-            return _getValue(ref body, ref startIndex, startString, criticChar);
+            return _getBetterValue(ref body, ref startIndex, startString, criticChar);
         }
     }
 }
