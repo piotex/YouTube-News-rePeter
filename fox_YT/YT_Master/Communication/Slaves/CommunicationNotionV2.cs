@@ -61,6 +61,7 @@ namespace YT_Master.Communication.Slaves
                 {
                     last_Title = i+2;
                     no_fo[i].SendKeys(record.Title);
+                    no_fo[i+1].SendKeys(record.Date);
                     break;
                 }
             }
