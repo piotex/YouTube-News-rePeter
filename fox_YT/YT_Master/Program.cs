@@ -43,7 +43,7 @@ namespace YT_Master
 
                 tmp.AddScenario(record);
 
-                Console.WriteLine(DateTime.Now + "   Ilość dodanych recordow:   " + i+1);
+                Console.WriteLine(DateTime.Now + "   Ilość dodanych recordow:   " + (i+1).ToString() );
             }
             Console.WriteLine("End: " + DateTime.Now);
 
