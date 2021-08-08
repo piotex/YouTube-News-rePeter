@@ -12,13 +12,21 @@ namespace YT_Master.Communication.Slaves
 {
     public class CommunicationNotionV2 : CommunicationNotionBasic
     {
-        public static int last_New              = 52; //= 58;56
-        public static int last_Title            = 30; //= 30;32
-        public static int last_Link             = 73; //= 75;77
-        public static int last_IloscZnakow      = 77; //= 79;81
-        public static int last_IloscKoment      = 80; //= 82;84
-        public static int last_UntitledSzablon  = 90; //= 94;94
-        public static int last_RAW              = 39; //= 41;43
+        public static int last_New              = 52; 
+
+        public static int last_RAW              = 39; // 41 43 45 47
+        public static int last_Title            = 30; // 30 32 34 36
+        public static int last_Link             = 73; // 73 76 79 82
+        public static int last_IloscZnakow      = 77; // 77 80 83 86
+        public static int last_IloscKoment      = 80; // 80 83 86 89
+        public static int last_UntitledSzablon  = 90; // 90 93 96 99
+
+        public static int inc_last_RAW              = 2; //2
+        public static int inc_last_Title            = 2; //2
+        public static int inc_last_Link             = 3; //4
+        public static int inc_last_IloscZnakow      = 3; //4
+        public static int inc_last_IloscKoment      = 3; //4
+        public static int inc_last_UntitledSzablon  = 3; //4
 
         public void LogIn()
         {
@@ -61,16 +69,8 @@ namespace YT_Master.Communication.Slaves
 
         public void click_New(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
         {
-            for (int i = last_New; i < no_fo.Count; i++)
-            {
-                no_fo = driver.FindElementsByClassName("notion-focusable");
-                if (no_fo[i].Text.ToString() == "New")
-                {
-                    last_New = i + 4;
-                    no_fo[i].Click();
-                    break;
-                }
-            }
+            no_fo = driver.FindElementsByClassName("notion-focusable");
+            no_fo[last_New].Click();
         }
         public void add_Title(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
         {
@@ -79,7 +79,7 @@ namespace YT_Master.Communication.Slaves
             {
                 if (no_fo[i - 1].Text == "Untitled" && no_fo[i + 1].Text == "")
                 {
-                    last_Title = i + 2;
+                    last_Title = i + inc_last_Title;
                     no_fo[i].SendKeys(record.Title);
                     no_fo[i + 1].SendKeys("Dodano do bankiera: " + record.Date);
                     break;
@@ -93,7 +93,7 @@ namespace YT_Master.Communication.Slaves
                 no_fo = driver.FindElementsByClassName("notion-focusable");
                 if (no_fo[i - 1].Text == "Link")
                 {
-                    last_Link = i + 4;
+                    last_Link = i + inc_last_Link;
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Link + Keys.Enter);
                     break;
@@ -107,7 +107,7 @@ namespace YT_Master.Communication.Slaves
                 no_fo = driver.FindElementsByClassName("notion-focusable");
                 if (no_fo[i - 1].Text == "Ilość znaków")
                 {
-                    last_IloscZnakow = i + 4;
+                    last_IloscZnakow = i + inc_last_IloscZnakow;
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Text.Length + Keys.Enter);
                     break;
@@ -121,7 +121,7 @@ namespace YT_Master.Communication.Slaves
                 no_fo = driver.FindElementsByClassName("notion-focusable");
                 if (no_fo[i - 1].Text == "Ilość komentarzy")
                 {
-                    last_IloscKoment = i + 4;
+                    last_IloscKoment = i + inc_last_IloscKoment;
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.CommentCount + Keys.Enter);
                     break;
@@ -135,7 +135,7 @@ namespace YT_Master.Communication.Slaves
                 no_fo = driver.FindElementsByClassName("notion-focusable");
                 if (no_fo[i - 1].Text.ToLower() == "untitled")
                 {
-                    last_UntitledSzablon = i + 4;
+                    last_UntitledSzablon = i + inc_last_UntitledSzablon;
                     no_fo[i - 1].Click();
                     break;
                 }
@@ -152,7 +152,7 @@ namespace YT_Master.Communication.Slaves
                 no_fo = driver.FindElementsByClassName("notranslate");
                 if (no_fo[i - 1].Text.ToString().Contains("R.A.W"))
                 {
-                    last_RAW = i + 2;
+                    last_RAW = i + inc_last_RAW;
                     no_fo[i].Click();
 
                     Thread.Sleep(1000);
