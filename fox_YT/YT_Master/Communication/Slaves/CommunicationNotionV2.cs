@@ -12,13 +12,13 @@ namespace YT_Master.Communication.Slaves
 {
     public class CommunicationNotionV2 : CommunicationNotionBasic
     {
-        public static int last_New = 58;
-        public static int last_Title = 30;
-        public static int last_Link = 75;
-        public static int last_IloscZnakow = 79;
-        public static int last_IloscKoment = 82;
-        public static int last_UntitledSzablon = 94;
-        public static int last_RAW = 41;
+        public static int last_New              = 52; //= 58;56
+        public static int last_Title            = 30; //= 30;32
+        public static int last_Link             = 73; //= 75;77
+        public static int last_IloscZnakow      = 77; //= 79;81
+        public static int last_IloscKoment      = 80; //= 82;84
+        public static int last_UntitledSzablon  = 90; //= 94;94
+        public static int last_RAW              = 39; //= 41;43
 
         public void LogIn()
         {
@@ -40,108 +40,132 @@ namespace YT_Master.Communication.Slaves
             Thread.Sleep(2000);
             ReadOnlyCollection<IWebElement> no_fo = driver.FindElementsByClassName("notion-focusable");
 
+            click_New(ref no_fo, record);
+
+            Thread.Sleep(1000);
+
+            //-------------Wpisy z bankiera---------------------------------------------------------//
+            add_Title(ref no_fo, record);
+
+            no_fo = driver.FindElementsByClassName("notion-focusable");
+
+            add_Link(ref no_fo, record);
+            add_CharCount(ref no_fo, record);
+            add_ComentCount(ref no_fo, record);
+            click_Template(ref no_fo, record);
+
+            Thread.Sleep(2000);
+
+            add_Text(ref no_fo, record);
+        }
+
+        public void click_New(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
             for (int i = last_New; i < no_fo.Count; i++)
             {
                 no_fo = driver.FindElementsByClassName("notion-focusable");
                 if (no_fo[i].Text.ToString() == "New")
                 {
-                    last_New = i+4;
+                    last_New = i + 4;
                     no_fo[i].Click();
                     break;
                 }
             }
-            Thread.Sleep(1000);
-
-
-            //-------------Wpisy z bankiera---------------------------------------------------------//
+        }
+        public void add_Title(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
             no_fo = driver.FindElementsByClassName("notranslate");
             for (int i = last_Title; i < no_fo.Count; i++)
             {
                 if (no_fo[i - 1].Text == "Untitled" && no_fo[i + 1].Text == "")
                 {
-                    last_Title = i+2;
+                    last_Title = i + 2;
                     no_fo[i].SendKeys(record.Title);
-                    no_fo[i+1].SendKeys(record.Date);
+                    no_fo[i + 1].SendKeys("Dodano do bankiera: " + record.Date);
                     break;
                 }
             }
-
-            try
+        }
+        public void add_Link(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
+            for (int i = last_Link; i < no_fo.Count; i++)
             {
                 no_fo = driver.FindElementsByClassName("notion-focusable");
-                for (int i = last_Link; i < no_fo.Count; i++)
+                if (no_fo[i - 1].Text == "Link")
                 {
-                    no_fo = driver.FindElementsByClassName("notion-focusable");
-                    if (no_fo[i - 1].Text == "Link")
-                    {
-                        last_Link = i+4;
-                        no_fo[i].Click();
-                        driver.FindElementsByTagName("input")[0].SendKeys(record.Link + Keys.Enter);
-                        break;
-                    }
-                }
-                for (int i = last_IloscZnakow; i < no_fo.Count; i++)
-                {
-                    no_fo = driver.FindElementsByClassName("notion-focusable");
-                    if (no_fo[i - 1].Text == "Ilość znaków")
-                    {
-                        last_IloscZnakow = i+4;
-                        no_fo[i].Click();
-                        driver.FindElementsByTagName("input")[0].SendKeys(record.Text.Length + Keys.Enter);
-                        break;
-                    }
-                }
-                for (int i = last_IloscKoment; i < no_fo.Count; i++)
-                {
-                    no_fo = driver.FindElementsByClassName("notion-focusable");
-                    if (no_fo[i - 1].Text == "Ilość komentarzy")
-                    {
-                        last_IloscKoment = i+4;
-                        no_fo[i].Click();
-                        driver.FindElementsByTagName("input")[0].SendKeys(record.CommentCount + Keys.Enter);
-                        break;
-                    }
-                }
-                for (int i = last_UntitledSzablon; i < no_fo.Count; i++)
-                {
-                    no_fo = driver.FindElementsByClassName("notion-focusable");
-                    if (no_fo[i - 1].Text.ToLower() == "untitled")
-                    {
-                        last_UntitledSzablon = i+4;
-                        no_fo[i - 1].Click();
-                        break;
-                    }
+                    last_Link = i + 4;
+                    no_fo[i].Click();
+                    driver.FindElementsByTagName("input")[0].SendKeys(record.Link + Keys.Enter);
+                    break;
                 }
             }
-            catch (Exception eeee)
+        }
+        public void add_CharCount(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
+            for (int i = last_IloscZnakow; i < no_fo.Count; i++)
             {
+                no_fo = driver.FindElementsByClassName("notion-focusable");
+                if (no_fo[i - 1].Text == "Ilość znaków")
+                {
+                    last_IloscZnakow = i + 4;
+                    no_fo[i].Click();
+                    driver.FindElementsByTagName("input")[0].SendKeys(record.Text.Length + Keys.Enter);
+                    break;
+                }
             }
+        }
+        public void add_ComentCount(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
+            for (int i = last_IloscKoment; i < no_fo.Count; i++)
+            {
+                no_fo = driver.FindElementsByClassName("notion-focusable");
+                if (no_fo[i - 1].Text == "Ilość komentarzy")
+                {
+                    last_IloscKoment = i + 4;
+                    no_fo[i].Click();
+                    driver.FindElementsByTagName("input")[0].SendKeys(record.CommentCount + Keys.Enter);
+                    break;
+                }
+            }
+        }
+        public void click_Template(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
+            for (int i = last_UntitledSzablon; i < no_fo.Count; i++)
+            {
+                no_fo = driver.FindElementsByClassName("notion-focusable");
+                if (no_fo[i - 1].Text.ToLower() == "untitled")
+                {
+                    last_UntitledSzablon = i + 4;
+                    no_fo[i - 1].Click();
+                    break;
+                }
+            }
+        }
 
-            Thread.Sleep(2000);
-
+        public void add_Text(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
+        {
             var textt = record.Text.Split('.');
 
             no_fo = driver.FindElementsByClassName("notranslate");
             for (int i = last_RAW; i < no_fo.Count; i++)
             {
                 no_fo = driver.FindElementsByClassName("notranslate");
-                if (no_fo[i-1].Text.ToString().Contains("R.A.W"))
+                if (no_fo[i - 1].Text.ToString().Contains("R.A.W"))
                 {
-                    last_RAW = i +2;
+                    last_RAW = i + 2;
                     no_fo[i].Click();
 
                     Thread.Sleep(1000);
 
-                    for (int j = textt.Length-1; j >= 0; j--)
+                    for (int j = textt.Length - 1; j >= 0; j--)
                     {
                         no_fo[i].SendKeys(textt[j] + Keys.Enter);
                     }
                     break;
                 }
             }
-
-            
         }
+
     }
 }
 

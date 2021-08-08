@@ -18,6 +18,7 @@ namespace YT_Master
 {
     class Program
     {
+        private static int pageCount = 10;
         static void Main(string[] args)
         {
             List<string> Linki = addLinks();
@@ -54,7 +55,6 @@ namespace YT_Master
         public static List<string> addLinks()
         {
             List<string> Linki = new List<string>();
-            int pageCount = 2;
 
             for (int pageNumger = 1; pageNumger <= pageCount; pageNumger++)
             {
