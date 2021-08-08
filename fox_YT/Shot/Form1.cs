@@ -40,30 +40,23 @@ namespace Shot
         private void Uzupelnij()
         {
             CommunicationBasic bb = new CommunicationBasic();
-            string body = bb.GetBody(Linki[counter]);
-            //string body = bb.GetBody(@"https://www.bankier.pl/wiadomosc/Apple-zamierza-kontrolowac-iCloud-pod-katem-tresci-z-pornografia-dziecieca-8166529.html");
-
-            string content = new OperationGetContent().GetContent(body);
-
-            textBox_tytul.Text = new OperationGetTitle().GetTitleFromText(content);
-            textBox_Date.Text = new OperationGetPublicationDate().GetDate(content);
-            textBox_tresc.Text = new OperationGetText().GetText(content);
-            textBox_komment.Text = new OperationGetKomensCount().GetCommentsCount(content);
-            textBox_link.Text = Linki[counter];
-            textBox_iloscZnakow.Text = textBox_tresc.Text.Length.ToString();
-
-
             CommunicationNotionV2 tmp = new CommunicationNotionV2();
             tmp.LogIn();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < Linki.Count; i++)
             {
-                tmp.AddScenario();
+                PageRecord record = new PageRecord();
+                string body = bb.GetBody(Linki[i]);
+                string content = new OperationGetContent().GetContent(body);
+
+                record.Link = Linki[counter];
+                record.Title = new OperationGetTitle().GetTitleFromText(content);
+                record.Date = new OperationGetPublicationDate().GetDate(content);
+                record.Text = new OperationGetText().GetText(content);
+                record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+
+                tmp.AddScenario(record);
             }
-
-
-            counter++;
-
         }
 
         private void nextRecerdButton_Click(object sender, EventArgs e)
