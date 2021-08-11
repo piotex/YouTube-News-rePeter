@@ -21,28 +21,74 @@ namespace YT_Master
         private static int pageCount = 10;
         static void Main(string[] args)
         {
-            List<string> Linki = addLinks();
-            CommunicationBasic bb = new CommunicationBasic();
-            CommunicationNotionV2 tmp = new CommunicationNotionV2();
+            CommunicationNotionV2 tmp;
+            CommunicationBasic bb;
+            List<string> Linki;
+            try
+            {
+                Linki = addLinks();
+                bb = new CommunicationBasic();
+                tmp = new CommunicationNotionV2();
+            }
+            catch (Exception eee)
+            {
+                wywaliloSie(eee.Message);
+
+                Linki = addLinks();
+                bb = new CommunicationBasic();
+                tmp = new CommunicationNotionV2();
+            }
 
             Console.WriteLine("\n---------------------------------\n");
             Console.WriteLine("Start: " + DateTime.Now);
 
-            tmp.LogIn();
+            try
+            {
+                tmp.LogIn();
+            }
+            catch (Exception eee)
+            {
+                wywaliloSie(eee.Message);
+                tmp.LogIn();
+            }
 
             for (int i = 0; i < Linki.Count; i++)
             {
                 PageRecord record = new PageRecord();
-                string body = bb.GetBody(Linki[i]);
-                string content = new OperationGetContent().GetContent(body);
+                
+                try
+                {
+                    string body = bb.GetBody(Linki[i]);
+                    string content = new OperationGetContent().GetContent(body);
 
-                record.Link = Linki[i];
-                record.Title = new OperationGetTitle().GetTitleFromText(content);
-                record.Date = new OperationGetPublicationDate().GetDate(content);
-                record.Text = new OperationGetText().GetText(content);
-                record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+                    record.Link = Linki[i];
+                    record.Title = new OperationGetTitle().GetTitleFromText(content);
+                    record.Date = new OperationGetPublicationDate().GetDate(content);
+                    record.Text = new OperationGetText().GetText(content);
+                    record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+                }
+                catch (Exception eee)
+                {
+                    wywaliloSie(eee.Message);
 
-                tmp.AddScenario(record);
+                    string body = bb.GetBody(Linki[i]);
+                    string content = new OperationGetContent().GetContent(body);
+
+                    record.Link = Linki[i];
+                    record.Title = new OperationGetTitle().GetTitleFromText(content);
+                    record.Date = new OperationGetPublicationDate().GetDate(content);
+                    record.Text = new OperationGetText().GetText(content);
+                    record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+                }
+                try
+                {
+                    tmp.AddScenario(record);
+                }
+                catch (Exception eee)
+                {
+                    wywaliloSie(eee.Message);
+                    tmp.AddScenario(record);
+                }
 
                 Console.WriteLine(DateTime.Now + "   Ilość dodanych recordow:   " + (i+1).ToString() );
             }
@@ -50,6 +96,13 @@ namespace YT_Master
 
             Console.ReadLine();
 
+        }
+        public static void wywaliloSie(string eee)
+        {
+            Console.WriteLine("\n---------------------------------\n");
+            Console.WriteLine("\n----------Wywalilo sie-----------\n");
+            Console.WriteLine(eee);
+            Console.WriteLine("\n---------------------------------\n");
         }
 
         public static List<string> addLinks()

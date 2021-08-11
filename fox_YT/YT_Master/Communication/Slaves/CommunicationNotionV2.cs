@@ -15,11 +15,11 @@ namespace YT_Master.Communication.Slaves
         public static int last_New              = 53; 
 
         public static int last_Title            = 30; // 30 32 34 36  ... 131
-        public static int last_Link             = 74; // 74 77 80 83  ...    223
-        public static int last_IloscZnakow      = 78; // 78 81 84 87  ...    226
-        public static int last_IloscKoment      = 81; // 81 84 87 90  ...    232
-        public static int last_UntitledSzablon  = 91; // 91 94 97 100 ...    239  
-        public static int last_RAW              = 41;  // 41 43 45 47  ... 140
+        public static int last_Link             = 74; // 74 77 80 83  ... 223
+        public static int last_IloscZnakow      = 78; // 78 81 84 87  ... 226
+        public static int last_IloscKoment      = 81; // 81 84 87 90  ... 232
+        public static int last_UntitledSzablon  = 91; // 91 94 97 100 ... 239  
+        public static int last_RAW              = 41;  // 41 43 45 47 ... 140
 
         public static int inc_last_Title            = 2; //2
         public static int inc_last_Link             = 3; //4
@@ -62,9 +62,9 @@ namespace YT_Master.Communication.Slaves
             add_ComentCount(ref no_fo, record);
             click_Template(ref no_fo, record);
 
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
-            add_Text(ref no_fo, record);
+            //add_Text(ref no_fo, record);
         }
 
         public void click_New(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
@@ -81,12 +81,9 @@ namespace YT_Master.Communication.Slaves
                 {
                     if (i < 130)
                     {
-                        if (no_fo[i + 2].Text == "")
-                        {
-                            last_Title = i + inc_last_Title;
-                            no_fo[i+1].SendKeys(record.Title);
-                            no_fo[i+2].SendKeys("Dodano do bankiera: " + record.Date);
-                        }
+                        last_Title = i + inc_last_Title;
+                        no_fo[i - 3].SendKeys(record.Title);                            //i=131
+                        no_fo[i - 2].SendKeys("Dodano do bankiera: " + record.Date);
                     }
                     else
                     {
@@ -106,7 +103,7 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Link + Keys.Enter);
-                    if (last_Link <223)
+                    if (i + inc_last_Link < 223)
                     {
                         last_Link = i + inc_last_Link;
                     }
@@ -123,7 +120,7 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Text.Length + Keys.Enter);
-                    if (last_IloscZnakow < 226)
+                    if (i + inc_last_IloscZnakow < 226)
                     {
                         last_IloscZnakow = i + inc_last_IloscZnakow;
                     }
@@ -140,7 +137,7 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.CommentCount + Keys.Enter);
-                    if (last_IloscKoment < 232)
+                    if (i + inc_last_IloscKoment < 232)
                     {
                         last_IloscKoment = i + inc_last_IloscKoment;
                     }
@@ -156,7 +153,7 @@ namespace YT_Master.Communication.Slaves
                 if (no_fo[i - 1].Text.ToLower() == "untitled")
                 {
                     no_fo[i - 1].Click();
-                    if (last_UntitledSzablon < 239)
+                    if (i + inc_last_UntitledSzablon < 239)
                     {
                         last_UntitledSzablon = i + inc_last_UntitledSzablon;
                     }
@@ -167,6 +164,8 @@ namespace YT_Master.Communication.Slaves
 
         public void add_Text(ref ReadOnlyCollection<IWebElement> no_fo, PageRecord record)
         {
+            record.Text = record.Text.Replace("-"," -");
+            record.Text = record.Text.Replace("\""," \"");
             var textt = record.Text.Split('.');
 
             no_fo = driver.FindElementsByClassName("notranslate");
