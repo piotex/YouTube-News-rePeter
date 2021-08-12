@@ -14,19 +14,19 @@ namespace YT_Master.Communication.Slaves
     {
         public static int last_New              = 53; 
 
-        public static int last_Title            = 30; // 30 32 34 36  ... 131
-        public static int last_Link             = 74; // 74 77 80 83  ... 223
-        public static int last_IloscZnakow      = 78; // 78 81 84 87  ... 226
-        public static int last_IloscKoment      = 81; // 81 84 87 90  ... 232
-        public static int last_UntitledSzablon  = 91; // 91 94 97 100 ... 239  
-        public static int last_RAW              = 41;  // 41 43 45 47 ... 140
+        public static int last_Title            = 34; // 34 36 ...
+        public static int last_Link             = 80; // 80 83 ...
+        public static int last_IloscZnakow      = 84; // 84 87 ...
+        public static int last_IloscKoment      = 87; // 87 90 ...
+        public static int last_UntitledSzablon  = 91; // 
+        public static int last_RAW              = 41; // 
 
         public static int inc_last_Title            = 2; //2
         public static int inc_last_Link             = 3; //4
         public static int inc_last_IloscZnakow      = 3; //4
         public static int inc_last_IloscKoment      = 3; //4
-        public static int inc_last_UntitledSzablon  = 3; //4
-        public static int inc_last_RAW              = 2; //2
+        public static int inc_last_UntitledSzablon  = 1; //4
+        public static int inc_last_RAW              = 1; //2
 
         public void LogIn()
         {
@@ -60,7 +60,7 @@ namespace YT_Master.Communication.Slaves
             add_Link(ref no_fo, record);
             add_CharCount(ref no_fo, record);
             add_ComentCount(ref no_fo, record);
-            click_Template(ref no_fo, record);
+            //click_Template(ref no_fo, record);
 
             //Thread.Sleep(2000);
 
