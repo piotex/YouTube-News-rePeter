@@ -14,10 +14,11 @@ namespace YT_Master.Communication.Slaves
     {
         public static int last_New              = 53; 
 
-        public static int last_Title            = 34; // 34 36 ...
-        public static int last_Link             = 80; // 80 83 ...
-        public static int last_IloscZnakow      = 84; // 84 87 ...
-        public static int last_IloscKoment      = 87; // 87 90 ...
+        public static int last_Title            = 34; // 34 36 ... 132
+        public static int last_Link             = 80; // 80 83 ... 230
+        public static int last_IloscZnakow      = 84; // 84 87 ... 
+        public static int last_IloscKoment      = 87; // 87 90 ... 236
+
         public static int last_UntitledSzablon  = 91; // 
         public static int last_RAW              = 41; // 
 
@@ -25,6 +26,7 @@ namespace YT_Master.Communication.Slaves
         public static int inc_last_Link             = 3; //4
         public static int inc_last_IloscZnakow      = 3; //4
         public static int inc_last_IloscKoment      = 3; //4
+
         public static int inc_last_UntitledSzablon  = 1; //4
         public static int inc_last_RAW              = 1; //2
 
@@ -79,7 +81,7 @@ namespace YT_Master.Communication.Slaves
             {
                 if (no_fo[i].Text == "Untitled")
                 {
-                    if (i < 130)
+                    if (i < 131)
                     {
                         last_Title = i + inc_last_Title;
                         no_fo[i - 3].SendKeys(record.Title);                            //i=131
@@ -87,6 +89,7 @@ namespace YT_Master.Communication.Slaves
                     }
                     else
                     {
+                        last_Title = i;
                         no_fo[i - 3].SendKeys(record.Title);                            //i=131
                         no_fo[i - 2].SendKeys("Dodano do bankiera: " + record.Date);
                     }
@@ -103,9 +106,13 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Link + Keys.Enter);
-                    if (i + inc_last_Link < 223)
+                    if (i + inc_last_Link < 228)
                     {
                         last_Link = i + inc_last_Link;
+                    }
+                    else
+                    {
+                        last_Link = i;
                     }
                     break;
                 }
@@ -120,9 +127,13 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.Text.Length + Keys.Enter);
-                    if (i + inc_last_IloscZnakow < 226)
+                    if (i + inc_last_IloscZnakow < 231)
                     {
                         last_IloscZnakow = i + inc_last_IloscZnakow;
+                    }
+                    else
+                    {
+                        last_IloscZnakow = i;
                     }
                     break;
                 }
@@ -137,9 +148,13 @@ namespace YT_Master.Communication.Slaves
                 {
                     no_fo[i].Click();
                     driver.FindElementsByTagName("input")[0].SendKeys(record.CommentCount + Keys.Enter);
-                    if (i + inc_last_IloscKoment < 232)
+                    if (i + inc_last_IloscKoment < 234)
                     {
                         last_IloscKoment = i + inc_last_IloscKoment;
+                    }
+                    else
+                    {
+                        last_IloscKoment = i;
                     }
                     break;
                 }

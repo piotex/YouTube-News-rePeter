@@ -18,7 +18,7 @@ namespace Tests_YT_Master
             string path = @"..\..\..\Files\Wiadomości z rynków - Bankier.pl.html";
             string body = File.ReadAllText(path);
             var tmp = new OperationGetLinks();
-            List<string> actual = tmp.MakeOperation(body);
+            List<string> actual = tmp.GetLinks(body);
 
             int expected_caount = 15;
             string expected_first_link = @"https://www.bankier.pl/wiadomosc/Modelowa-marza-rafineryjna-Grupy-Lotos-w-lipcu-spadla-do-2-46-USD-bbl-8163627.html";

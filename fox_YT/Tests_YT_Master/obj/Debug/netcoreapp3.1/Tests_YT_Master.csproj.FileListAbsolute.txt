@@ -92,7 +92,6 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\YT_Master.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\YT_Master.pdb
-C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.csprojAssemblyReference.cache
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.AssemblyInfoInputs.cache
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.AssemblyInfo.cs
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.csproj.CoreCompileInputs.cache
@@ -102,3 +101,4 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.genruntimeconfig.cache
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\Xamarin.Essentials.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\obj\Debug\netcoreapp3.1\Tests_YT_Master.csproj.AssemblyReference.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\Tests_YT_Master\bin\Debug\netcoreapp3.1\NUglify.dll

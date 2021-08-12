@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "YT_Master/1.0.0": {
         "dependencies": {
+          "NUglify": "1.13.12",
           "Selenium.Firefox.WebDriver": "0.27.0",
           "Selenium.WebDriver": "3.141.0",
           "Xamarin.Essentials": "1.7.0"
@@ -106,6 +107,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.3.21018"
+          }
+        }
+      },
+      "NUglify/1.13.12": {
+        "runtime": {
+          "lib/netstandard2.0/NUglify.dll": {
+            "assemblyVersion": "1.13.12.0",
+            "fileVersion": "1.13.12.0"
           }
         }
       },
@@ -890,6 +899,13 @@
       "sha512": "sha512-hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "path": "newtonsoft.json/10.0.3",
       "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
+    },
+    "NUglify/1.13.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+13YE9UjnXx4+NKP+j1Axiz/QAMtK++ZtG61u9iiR2/WzPzr7EfBDOwj+xHNyTEMS9Emq/mCyWaBGjCABhC0HQ==",
+      "path": "nuglify/1.13.12",
+      "hashPath": "nuglify.1.13.12.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
