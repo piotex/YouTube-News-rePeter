@@ -1,0 +1,14 @@
+Add Database
+Widok Domyœlny
+[Filter]
+[Sort]
+[Search]
+[Open As Page]
+[...]
+[NEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!] -> {43 - linia == 42 record[i]}
+[strzalka]
+Pokazaæ wyniki gie³dy - sektorami
+
+------------------------------------------------------------------------------------------------------------------After New Click--------------------------------------
+
+

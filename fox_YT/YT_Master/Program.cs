@@ -21,86 +21,89 @@ namespace YT_Master
         private static int pageCount = 10;
         static void Main(string[] args)
         {
-            CommunicationNotionV2 tmp;
-            CommunicationBasic bb;
-            List<string> Linki;
-            try
-            {
-                Linki = addLinks();
-                bb = new CommunicationBasic();
-                tmp = new CommunicationNotionV2();
-            }
-            catch (Exception eee)
-            {
-                wywaliloSie(eee.Message);
-
-                Linki = addLinks();
-                bb = new CommunicationBasic();
-                tmp = new CommunicationNotionV2();
-            }
-
-            Console.WriteLine("\n---------------------------------\n");
+            Console.WriteLine("\n-------Zbieranie Newsow---------\n");
+            Console.WriteLine("\n--------------------------------\n");
             Console.WriteLine("Start: " + DateTime.Now);
 
+            CommunicationNotionV2 tmp = new CommunicationNotionV2();
+            List<string> Links;
             try
             {
-                tmp.LogIn();
+                Links = addLinks();
+                tryLogIn(ref tmp);
+
+                for (int i = 0; i < Links.Count; i++)
+                {
+                    PageRecord record = new PageRecord();
+                    trySetRecord(ref record, Links[i]);
+                    tryAddRecordToNotionDatabase(ref tmp, ref record);
+
+                    Console.WriteLine(DateTime.Now + "   Ilość dodanych recordow:   " + (i + 1).ToString());
+                }
+
             }
             catch (Exception eee)
             {
-                wywaliloSie(eee.Message);
-                tmp.LogIn();
+                wywaliloSie(eee.Message, "BIG trY");
             }
-
-            for (int i = 0; i < Linki.Count; i++)
-            {
-                PageRecord record = new PageRecord();
-                
-                try
-                {
-                    string body = bb.GetBody(Linki[i]);
-                    string content = new OperationGetContent().GetContent(body);
-
-                    record.Link = Linki[i];
-                    record.Title = new OperationGetTitle().GetTitleFromText(content);
-                    record.Date = new OperationGetPublicationDate().GetDate(content);
-                    record.Text = new OperationGetText().GetText(content);
-                    record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
-                }
-                catch (Exception eee)
-                {
-                    wywaliloSie(eee.Message);
-
-                    string body = bb.GetBody(Linki[i]);
-                    string content = new OperationGetContent().GetContent(body);
-
-                    record.Link = Linki[i];
-                    record.Title = new OperationGetTitle().GetTitleFromText(content);
-                    record.Date = new OperationGetPublicationDate().GetDate(content);
-                    record.Text = new OperationGetText().GetText(content);
-                    record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
-                }
-                try
-                {
-                    tmp.AddScenario(record);
-                }
-                catch (Exception eee)
-                {
-                    wywaliloSie(eee.Message);
-                    tmp.AddScenario(record);
-                }
-
-                Console.WriteLine(DateTime.Now + "   Ilość dodanych recordow:   " + (i+1).ToString() );
-            }
+            
             Console.WriteLine("End: " + DateTime.Now);
-
             Console.ReadLine();
 
         }
-        public static void wywaliloSie(string eee)
+        public static void tryLogIn(ref CommunicationNotionV2 tmp)
+        {
+            try
+            {
+                tmp.LogIn();
+            }
+            catch (Exception eee)
+            {
+                wywaliloSie(eee.Message, "Login");
+                tmp.LogIn();
+            }
+        }
+        public static void tryAddRecordToNotionDatabase(ref CommunicationNotionV2 tmp, ref PageRecord record)
+        {
+            try
+            {
+                tmp.AddRecordToNotionDatabase(record);
+            }
+            catch (Exception eee)
+            {
+                wywaliloSie(eee.Message);
+                tmp.AddRecordToNotionDatabase(record);            //try one more time
+            }
+        }
+        public static void trySetRecord(ref PageRecord record, string link)
+        {
+            try
+            {
+                setRecord(ref record, link);
+            }
+            catch (Exception eee)
+            {
+                wywaliloSie(eee.Message);
+                setRecord(ref record, link);                  //try one more time
+            }
+        }
+        public static void setRecord(ref PageRecord record, string link)
+        {
+            string body = new CommunicationBasic().GetBody(link);
+            string content = new OperationGetContent().GetContent(body);
+
+            record.Link = link;
+            record.Title = new OperationGetTitle().GetTitleFromText(content);
+            record.Date = new OperationGetPublicationDate().GetDate(content);
+            record.Text = new OperationGetText().GetText(content);
+            record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+        }
+        public static void wywaliloSie(string eee,string privMsg="")
         {
             Console.WriteLine("\n---------------------------------\n");
             Console.WriteLine("\n----------Wywalilo sie-----------\n");
+            Console.WriteLine(privMsg);
+            Console.WriteLine("\n---------------------------------\n");
             Console.WriteLine(eee);
             Console.WriteLine("\n---------------------------------\n");
         }
