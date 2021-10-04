@@ -86,7 +86,7 @@ namespace YT_Master.Communication.Slaves
             {
                 l_trans.Add(no_fo[j].Text.ToString());
             }
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\YT_Master\Files\someInfo.txt"))
+            using (StreamWriter writer = new StreamWriter(@"..\..\Files\someInfo.txt"))
             {
                 for (int i = 0; i < l_trans.Count; i++)
                 {

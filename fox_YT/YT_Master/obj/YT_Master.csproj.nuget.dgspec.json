@@ -42,7 +42,7 @@
           "dependencies": {
             "NUglify": {
               "target": "Package",
-              "version": "[1.13.12, )"
+              "version": "[1.16.0, )"
             },
             "Selenium.Firefox.WebDriver": {
               "target": "Package",
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -124,7 +124,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "NUglify/1.13.12": {
+      "NUglify/1.16.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NUglify.dll": {}
@@ -1617,10 +1617,10 @@
         "tools/install.ps1"
       ]
     },
-    "NUglify/1.13.12": {
-      "sha512": "+13YE9UjnXx4+NKP+j1Axiz/QAMtK++ZtG61u9iiR2/WzPzr7EfBDOwj+xHNyTEMS9Emq/mCyWaBGjCABhC0HQ==",
+    "NUglify/1.16.0": {
+      "sha512": "MDFoxNq4G4g6ShsP15TV8D6uURYcP2bSL0PdnL0tAWWmrDBvoOxPCp9QYBDIQH9sgutOLuvJAK0CR94ohKm0YA==",
       "type": "package",
-      "path": "nuglify/1.13.12",
+      "path": "nuglify/1.16.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1628,11 +1628,13 @@
         "lib/net35/NUglify.xml",
         "lib/net40/NUglify.dll",
         "lib/net40/NUglify.xml",
+        "lib/net5.0/NUglify.dll",
+        "lib/net5.0/NUglify.xml",
         "lib/netstandard1.3/NUglify.dll",
         "lib/netstandard1.3/NUglify.xml",
         "lib/netstandard2.0/NUglify.dll",
         "lib/netstandard2.0/NUglify.xml",
-        "nuglify.1.13.12.nupkg.sha512",
+        "nuglify.1.16.0.nupkg.sha512",
         "nuglify.nuspec",
         "nuglify.png"
       ]
@@ -5390,7 +5392,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "NUglify >= 1.13.12",
+      "NUglify >= 1.16.0",
       "Selenium.Firefox.WebDriver >= 0.27.0",
       "Selenium.WebDriver >= 3.141.0",
       "Xamarin.Essentials >= 1.7.0"
@@ -5437,7 +5439,7 @@
         "dependencies": {
           "NUglify": {
             "target": "Package",
-            "version": "[1.13.12, )"
+            "version": "[1.16.0, )"
           },
           "Selenium.Firefox.WebDriver": {
             "target": "Package",
@@ -5467,7 +5469,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

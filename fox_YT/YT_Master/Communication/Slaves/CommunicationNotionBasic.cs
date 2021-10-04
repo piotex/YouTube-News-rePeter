@@ -10,8 +10,8 @@ namespace YT_Master.Communication.Slaves
         protected FirefoxDriver driver;
         public CommunicationNotionBasic()
         {
-            //string path = @".";
-            string path = @"C:\Users\pkubo\OneDrive\Desktop\YouTube\fox_YT\ConsoleApp1\bin\Debug\netcoreapp3.1";
+            string path = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\YT_Master\bin\Debug\netcoreapp3.1";
+            //string path = @"C:\Users\pkubo\OneDrive\Desktop\YouTube\fox_YT\ConsoleApp1\bin\Debug\netcoreapp3.1";
             FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(path, "geckodriver.exe");
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe ";// -private ";
             driver = new FirefoxDriver(service);
