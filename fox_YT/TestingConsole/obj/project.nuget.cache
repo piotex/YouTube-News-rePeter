@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IvpP79clkxm4FQ3UFa+svsATwtgj0pOFTQimEdEzVLiiMzZgEnrby1E0IOzorccqxMcM1mJyd53YK7B9j2vU7w==",
+  "dgSpecHash": "ZVhMh3WtsVu2x/ykHGS2v/1OOv6iDkiPui9lkNwb5IcGGSe0FdwHx8XADI9ylyysCIOSu6m9uKRF7stPs8sDyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj",
+  "projectFilePath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\TestingConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pkubo\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\pkubo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

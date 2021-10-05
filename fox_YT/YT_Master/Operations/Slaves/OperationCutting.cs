@@ -44,7 +44,7 @@ namespace YT_Master.Operations.Slaves
                 }
                 startIndex += ret.Length;
             }
-            return ret;
+            return ret.TrimEnd();
         }
         protected string _getValue(ref string body, ref int startIndex, string startString, char criticChar)
         {

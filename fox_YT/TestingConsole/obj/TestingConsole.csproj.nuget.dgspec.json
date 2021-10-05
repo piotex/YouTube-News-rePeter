@@ -1,9 +1,67 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj": {}
+    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\TestingConsole.csproj": {}
   },
   "projects": {
+    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\TestingConsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\TestingConsole.csproj",
+        "projectName": "TestingConsole",
+        "projectPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\TestingConsole.csproj",
+        "packagesPath": "C:\\Users\\pkubo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\TestingConsole\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pkubo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj": {
+                "projectPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\rePeter---youtube-chanel-manager\\fox_YT\\YT_Master\\YT_Master.csproj": {
       "version": "1.0.0",
       "restore": {
