@@ -27,6 +27,7 @@ namespace YT_Master
 {
     class Program
     {
+        private static DateTime start;
         private static int pageCount = 10;
         static void Main(string[] args)
         {
@@ -58,6 +59,7 @@ namespace YT_Master
             }
             
             Console.WriteLine("End: " + DateTime.Now);
+            Console.WriteLine("Zajelo: " + (DateTime.Now-start) );
             Console.ReadLine();
 
         }
@@ -67,6 +69,7 @@ namespace YT_Master
             Console.WriteLine("\n-------Zbieranie Newsow---------\n");
             Console.WriteLine("\n--------------------------------\n");
             Console.WriteLine("Start: " + DateTime.Now);
+            start = DateTime.Now;
         }
         public static bool falidDate(ref PageRecord record)
         {
