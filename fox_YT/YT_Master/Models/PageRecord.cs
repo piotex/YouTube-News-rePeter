@@ -11,7 +11,7 @@ namespace YT_Master.Models
         public string Title; 
         public string Date; 
         public string Text;
-        public string CommentCount; 
+        public int CommentCount; 
         public string Link;
 
         public PageRecord()
@@ -19,7 +19,7 @@ namespace YT_Master.Models
             Title = "";
             Date = "";
             Text = "";
-            CommentCount = "";
+            CommentCount = 0;
             Link = "";
         }
 

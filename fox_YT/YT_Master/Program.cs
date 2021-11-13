@@ -36,7 +36,7 @@ namespace YT_Master
             {
                 CommunicationNotionV2 tmp = new CommunicationNotionV2();
                 List<string> Links = addLinks();
-                tryLogIn(ref tmp);
+                //tryLogIn(ref tmp);
 
                 for (int i = 0; i < Links.Count; i++)
                 {
@@ -123,7 +123,7 @@ namespace YT_Master
             record.Title = new OperationGetTitle().GetTitleFromText(content);
             record.Date = new OperationGetPublicationDate().GetDate(content);
             record.Text = new OperationGetText().GetText(content);
-            record.CommentCount = new OperationGetKomensCount().GetCommentsCount(content);
+            record.CommentCount = int.Parse(new OperationGetKomensCount().GetCommentsCount(content));
             
             return 0;
         }
