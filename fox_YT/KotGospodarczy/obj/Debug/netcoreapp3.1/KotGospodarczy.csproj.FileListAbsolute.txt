@@ -24,3 +24,4 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\KotGospodarczy\obj\Debug\netcoreapp3.1\KotGospodarczy.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\KotGospodarczy\obj\Debug\netcoreapp3.1\KotGospodarczy.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\KotGospodarczy\obj\Debug\netcoreapp3.1\KotGospodarczy.genruntimeconfig.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\rePeter---youtube-chanel-manager\fox_YT\KotGospodarczy\obj\Debug\netcoreapp3.1\KotGospodarczy.MainForm.resources
