@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace KotGospodarczy.MyCode.v1.Bankier
+namespace KotGospodarczy.MyCode.v1.Managers
 {
     public class NewsManagerBankier : NewsManager ,INewsManager
     {
