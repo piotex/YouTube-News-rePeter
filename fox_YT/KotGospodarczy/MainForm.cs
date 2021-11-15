@@ -33,6 +33,10 @@ namespace KotGospodarczy
         {
             _add_Form(new NewsManagerTheStreet().GetNewsList());
         }
+        private void button_FoxNews_Click(object sender, EventArgs e)
+        {
+            _add_Form(new NewsManagerFoxNews().GetNewsList());
+        }
 
         private void onClickEventHandler(object sender, EventArgs e)
         {

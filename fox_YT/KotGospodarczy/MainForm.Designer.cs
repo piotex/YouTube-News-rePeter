@@ -33,6 +33,7 @@ namespace KotGospodarczy
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_GetCNBCNews = new System.Windows.Forms.Button();
             this.button_theStreet = new System.Windows.Forms.Button();
+            this.button_FoxNews = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_GetBankierNews
@@ -72,11 +73,22 @@ namespace KotGospodarczy
             this.button_theStreet.UseVisualStyleBackColor = true;
             this.button_theStreet.Click += new System.EventHandler(this.button_theStreet_Click);
             // 
+            // button_FoxNews
+            // 
+            this.button_FoxNews.Location = new System.Drawing.Point(12, 144);
+            this.button_FoxNews.Name = "button_FoxNews";
+            this.button_FoxNews.Size = new System.Drawing.Size(134, 38);
+            this.button_FoxNews.TabIndex = 4;
+            this.button_FoxNews.Text = "Get FoxNews News";
+            this.button_FoxNews.UseVisualStyleBackColor = true;
+            this.button_FoxNews.Click += new System.EventHandler(this.button_FoxNews_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_FoxNews);
             this.Controls.Add(this.button_theStreet);
             this.Controls.Add(this.button_GetCNBCNews);
             this.Controls.Add(this.textBox1);
@@ -95,5 +107,6 @@ namespace KotGospodarczy
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_GetCNBCNews;
         private System.Windows.Forms.Button button_theStreet;
+        private System.Windows.Forms.Button button_FoxNews;
     }
 }

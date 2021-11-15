@@ -4,6 +4,7 @@ using KotGospodarczy.MyCode.v1.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 
 namespace KotGospodarczy.MyCode.v1.Managers
@@ -12,8 +13,6 @@ namespace KotGospodarczy.MyCode.v1.Managers
     {
         public List<ModelNews> GetNewsList()
         {
-            //return _getInvestionPageNewsList();
-            DateTime yesterday = DateTime.Now.AddDays(-1);
             List<ModelNews> ret = new List<ModelNews>();
 
             List<ModelNews> tmp = _getXXXPageNewsList("investing");
@@ -24,18 +23,19 @@ namespace KotGospodarczy.MyCode.v1.Managers
             List<ModelNews> tmp6 = _getXXXPageNewsList("video");
             List<ModelNews> tmp7 = _getXXXPageNewsList("financial-advisor-center");
             List<ModelNews> tmp8 = _getXXXPageNewsList("technology");
-            for (int j = 0; j < tmp.Count; j++)
-            {
-                if (tmp[j].PublicationDate > yesterday)
-                {
-                    ret.Add(tmp[j]);
-                }
-                else
-                {
-                    return ret;
-                }
-            }
-            return ret;
+
+            ret.AddRange(tmp);
+            ret.AddRange(tmp2);
+            ret.AddRange(tmp3);
+            //ret.AddRange(tmp4);
+            ret.AddRange(tmp5);
+            ret.AddRange(tmp6);
+            ret.AddRange(tmp7);
+            ret.AddRange(tmp8);
+
+            List<ModelNews> ret2 = ret.GroupBy(x => x.Link).Select(y => y.First()).ToList();
+
+            return ret2;
         }
 
         private List<ModelNews> _getXXXPageNewsList(string xxx)
